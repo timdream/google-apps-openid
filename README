@@ -1,0 +1,16 @@
+
+ google-apps-openid
+ ==================
+ 
+ This site hosts OpenID discovery information in XRDS necessary for Google Apps Hosted Dommains OpenID to work.
+
+ To use your Hosted Dommains account as OpenID, enter http://your.hostname/openid as the login URL.
+
+ You will get an OpenID identifier like http://your.hostname/openid?id=<number>
+
+
+ The original Google documentation can be found here:
+
+ http://groups.google.com/group/google-federated-login-api/web/openid-discovery-for-hosted-domains
+
+

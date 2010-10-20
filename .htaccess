@@ -1,0 +1,16 @@
+RewriteEngine On
+
+# rewrite user discovery xrds
+RewriteCond %{QUERY_STRING} ^id=\d+$
+	RewriteRule ^openid$ /user_xrds.php [L]
+
+# rewrite server discovery xrds
+RewriteCond %{QUERY_STRING} =""
+	RewriteRule ^openid$ https://www.google.com/accounts/o8/site-xrds?hd=%{HTTP_HOST} [R,L]
+
+# rewrite malform URLs to 400
+RewriteRule ^openid$ - [R=400,L]
+
+# rewrite everything else to server discovery xrds - enable these to use your own home page as login URL
+#RewriteCond %{REQUEST_FILENAME} !-f
+#	RewriteRule .* https://www.google.com/accounts/o8/site-xrds?hd=%{HTTP_HOST} [R,L]
