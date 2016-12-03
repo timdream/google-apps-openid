@@ -18,7 +18,7 @@ if (!isset($_GET['id']) || preg_match('/^\d+$/', $_GET['id']) !== 1) {
 
 /* This XRD is shorter than described in the doc since we don't sign the XML */
 
-header('Content-Type: application/xml+xrds');
+header('Content-Type: application/xrds+xml');
 print '<?xml version="1.0" encoding="UTF-8"?>';
 
 ?>
